@@ -17,7 +17,8 @@ const Home = () => {
 	useEffect(
 		() => {
 			authContext.loadUser();
-			error && setAlert(error, 'success');
+			if (error === 'Contact updated sucessfully' || error === 'Contact deleted sucessfully')
+				setAlert(error, 'success');
 			clearErrors();
 		},
 		// eslint-disable-next-line
