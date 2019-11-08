@@ -82,7 +82,8 @@ router.put('/:id', [ auth, [ check('name', 'Please enter a valid name').not().is
 
 		const contact = await Contact.findByIdAndUpdate(req.params.id, { $set: contactFields }, { new: true });
 
-		res.json(contact);
+		res.json({ msg: 'Contact updated sucessfully' });
+		// res.json(contact);
 	} catch (err) {
 		console.error(err.message);
 		return res.status(500).send('Server Error');

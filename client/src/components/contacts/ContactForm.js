@@ -51,9 +51,9 @@ const ContactForm = () => {
 	return (
 		<form onSubmit={onSubmit}>
 			<h2 className='text-primary'>{current ? 'Edit Contact' : 'Add Contact'}</h2>
-			<input type='text' name='name' placeholder='Name' value={name} onChange={onChange} />
-			<input type='email' name='email' placeholder='Email' value={email} onChange={onChange} />
-			<input type='text' name='phone' placeholder='Phone' value={phone} onChange={onChange} />
+			<input type='text' name='name' required placeholder='Name' value={name} onChange={onChange} />
+			<input type='email' name='email' required placeholder='Email' value={email} onChange={onChange} />
+			<input type='text' name='phone' required placeholder='Phone' value={phone} onChange={onChange} />
 			<h5>Contact Type</h5>
 			<input type='radio' name='type' value='personal' checked={type === 'personal'} onChange={onChange} />{' '}
 			Personal {' '}
